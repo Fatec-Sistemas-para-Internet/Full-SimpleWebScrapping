@@ -1,4 +1,4 @@
-# 📚 Marxists Library Web Scraper
+# ⚒️ Marxists Library Web Scraper ⚒️
 
 A modern, client-side web scraping tool that extracts, processes, and visualizes author data from the Portuguese section of the [Marxists Internet Archive](https://www.marxists.org/portugues/biblioteca.htm).
 

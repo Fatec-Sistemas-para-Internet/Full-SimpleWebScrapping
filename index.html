@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marxists Library - Web Scraping</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=open_in_new" />
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>📚 Marxists Library</h1>
+            <p>Author Viewer via Web Scraping <a href="https://www.marxists.org/portugues/biblioteca.htm">Marxists.org<span class="material-symbols-outlined">
+open_in_new
+</span></a> in portuguese.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="controls">
+            <button id="btn-load" onclick="initScraping()">
+                Load Data from Marxists.org
+            </button>
+            <p id="status-msg" class="status">Waiting a click on the button above... 🙄</p>
+        </section>
+
+        <!-- Statistics Area (Cards) -->
+        <section id="stats-section" class="hidden">
+            <h2>Statistics by Letter</h2>
+            <div id="stats-grid" class="grid-stats">
+                <!-- Cards will be generated here by JS -->
+            </div>
+            <div class="total-box">
+                Total Authors Found: <span id="total-count">0</span>
+            </div>
+        </section>
+
+        <!-- Author List Area -->
+        <section id="authors-section" class="hidden">
+            <h2>Complete Author List</h2>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Filter author in list..." onkeyup="filterList()">
+            </div>
+            <ul id="authors-list" class="author-list">
+                <!-- The list will be generated here by JS -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Generated via Web Scraping with Vanilla JS</p>
+    </footer>
+
+    <script src="scrape.js"></script>
+</body>
+</html>
